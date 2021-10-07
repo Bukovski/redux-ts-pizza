@@ -46,8 +46,10 @@
     "scss": "node-sass src/assets/scss/main.scss -o src/",
     "watch-scss": "node-sass --watch src/assets/scss/main.scss -o src/",
     "build-scss": "npm run scss",
-    "server": "npx json-server --watch public/db.json --port=3001"
+    "server": "node server.js",
+    "json-server": "json-server --watch public/db.json --port=3001"
   },
+  "proxy": "http://localhost:3001",
   "eslintConfig": {
     "extends": [
       "react-app",
