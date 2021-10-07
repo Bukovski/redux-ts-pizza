@@ -12,7 +12,7 @@ const SERVER_URL = process.env.REACT_APP_SERVER_URL || "";
 export const fetchPizzas = (sortBy: IFiltersSortByState, category: null | number) =>
   (dispatch: Dispatch<PizzaAction>) => {
     axios.get(
-        `${ SERVER_URL }/pizzas?${
+        `/pizzas?${
           (category !== null)
             ? `category=${ category }`
             : ''
