@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import { CartItem, Button, CartEmpty, FormOrderPopup } from '../components';
 import useComponentVisible from "../hooks/useComponentVisible";
@@ -18,6 +18,7 @@ function Cart() {
   const dispatch = useDispatch();
   const { totalPrice, totalCount, items } = useSelector(({ cart }: RootState) => cart);
   const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
+  const history = useHistory();
 
 
   const handleClearCart = useCallback(() => {
@@ -47,6 +48,7 @@ function Cart() {
     toggleVisiblePopup();
 
     dispatch(clearCart());
+    history.push("/");
   };
 
 
