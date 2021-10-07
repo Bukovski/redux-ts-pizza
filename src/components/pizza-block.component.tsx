@@ -87,7 +87,7 @@ const PizzaBlock = (props: IPizzasJson & IPizzasBlock) => {
             />
           </svg>
           <span>Добавить</span>
-          { addedCount && <i>{ addedCount }</i> }
+          { (addedCount !== 0) && <i>{ addedCount }</i> }
         </Button>
       </div>
     </section>

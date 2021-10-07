@@ -332,10 +332,12 @@ a {
     justify-content: space-between;
     margin-top: 20px; }
   .pizza-block__price {
+    margin-right: 5px;
     font-weight: bold;
     font-size: 22px;
     line-height: 27px;
-    letter-spacing: .015em; }
+    letter-spacing: .015em;
+    white-space: nowrap; }
 
 .error {
   display: flex;
@@ -647,7 +649,7 @@ body {
 
 /*==========  Desktops First  ==========*/
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1270px) {
   html {
     font-size: 12px; }
   .content__items {
