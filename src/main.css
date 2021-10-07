@@ -72,6 +72,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+  .header__cart {
+    margin: 10px; }
   .header__logo {
     display: flex; }
     .header__logo img {
@@ -86,7 +88,8 @@ a {
       color: #7b7b7b; }
 
 .button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   background-color: #fe5f1e;
   border-radius: 30px;
   padding: 10px 20px;
@@ -203,6 +206,7 @@ a {
     .categories ul li {
       display: inline-block;
       padding: 13px 30px;
+      margin: 5px 2px;
       border-radius: 50px;
       font-weight: bold;
       transition: background-color 0.1s ease-in-out;
@@ -272,7 +276,13 @@ a {
   margin-bottom: 65px;
   text-align: center; }
   .pizza-block__image {
-    width: 260px; }
+    display: block;
+    max-width: 260px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+    border-radius: 30%; }
   .pizza-block__title {
     margin-bottom: 20px;
     font-size: 20px;
@@ -429,7 +439,8 @@ body {
 .content {
   padding: 40px 0; }
   .content__title {
-    margin: 35px 0; }
+    margin: 35px 0;
+    font-size: 2.8rem; }
   .content__items {
     display: grid;
     grid-template-rows: 1fr;
@@ -598,6 +609,7 @@ body {
           fill: transparent;
           stroke-width: 2; }
     .cart__bottom-buttons .pay-btn {
+      display: inline-block;
       width: 210px;
       padding: 16px;
       font-size: 16px;
@@ -605,10 +617,11 @@ body {
 
 .cart--empty {
   margin: 0 auto;
-  width: 560px;
+  max-width: 560px;
+  width: 100%;
   text-align: center; }
   .cart--empty h2 {
-    font-size: 32px;
+    font-size: 3rem;
     margin-bottom: 10px; }
   .cart--empty p {
     font-size: 18px;
@@ -621,7 +634,9 @@ body {
     top: 2px; }
   .cart--empty img {
     display: block;
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
     margin: 45px auto 60px; }
   .cart--empty .button--black {
     width: 230px;
@@ -653,21 +668,28 @@ body {
     font-size: 10px; }
   body {
     padding: 20px 0; }
+  .button {
+    padding: 0.8rem 1.5rem; }
+    .button span {
+      font-size: 1.5rem;
+      font-weight: 100; }
   .wrapper {
     width: calc(100% - 40px); }
-  .content__title {
-    font-size: 36px; }
-  .content__items {
-    grid-template-columns: 1fr; }
-  .content__top {
-    flex-direction: column; }
+  .content {
+    padding: 15px 0; }
+    .content__items {
+      grid-template-columns: 1fr; }
+    .content__top {
+      flex-direction: column; }
   .container--cart {
     margin-top: 0;
     margin-bottom: 0; }
   .cart__top {
     flex-direction: column; }
     .cart__top .content__title {
-      margin-bottom: 20px; }
+      margin-bottom: 15px; }
+  .cart--empty img {
+    margin: 2rem auto; }
   .cart__item {
     flex-direction: column;
     position: relative; }
@@ -678,6 +700,8 @@ body {
       .cart__item-img img {
         width: 60%;
         height: auto; }
+    .cart__item .button {
+      padding: 0; }
     .cart__item-info {
       width: 100%;
       order: 2; }
@@ -702,8 +726,9 @@ body {
     .cart__item-price {
       align-items: flex-start;
       justify-content: flex-start;
-      order: 3;
-      margin: 10px 0; }
+      width: auto;
+      margin: 10px 0;
+      order: 3; }
       .cart__item-price b {
         font-size: 26px; }
     .cart__item-remove {
@@ -717,22 +742,51 @@ body {
     max-width: 100%;
     margin-bottom: 30px; }
     .categories ul li {
-      padding: 10px 20px; }
-  .header .container {
-    flex-direction: column; }
-    .header .container__cart {
-      margin-top: 30px; }
+      padding: 0.8rem 1.7rem;
+      font-size: 1.6rem;
+      font-weight: 100; }
+  .header {
+    padding: 15px 0; }
+    .header .container {
+      flex-direction: column; }
+      .header .container__cart {
+        margin-top: 30px; }
   .pizza-block:not(:last-of-type) {
     margin-bottom: 25px;
     padding-bottom: 45px;
-    border-bottom: 1px solid #efefef; } }
+    border-bottom: 1px solid #efefef; }
+  .pizza-block__price {
+    font-size: 2.5rem; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   html {
     font-size: 9px; }
-  .cart__item h3 {
-    font-size: 24px; }
+  .pizza-block {
+    margin: 5px auto !important;
+    padding-bottom: 15px !important; }
+    .pizza-block__title {
+      margin-bottom: 10px;
+      font-size: 2.2rem; }
+  .cart .content__title {
+    font-size: 2.6rem; }
+  .cart__item {
+    text-align: center; }
+    .cart__item h3 {
+      font-size: 3rem;
+      margin: 5px auto; }
+    .cart__item p {
+      font-size: 2.3rem; }
+    .cart__item-price {
+      display: inline-block; }
+      .cart__item-price b {
+        font-size: 2.5rem; }
+    .cart__item-count {
+      width: 100px;
+      margin: 0 auto; }
+    .cart__item .button {
+      width: 30px;
+      height: 32px; }
   .cart__bottom-buttons {
     flex-direction: column; }
     .cart__bottom-buttons .button {

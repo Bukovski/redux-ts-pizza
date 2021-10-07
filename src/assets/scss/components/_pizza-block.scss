@@ -4,7 +4,13 @@
   text-align: center;
 
   &__image {
-    width: 260px;
+    display:block;
+    max-width: 260px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+    border-radius: 30%;
   }
 
   &__title {
