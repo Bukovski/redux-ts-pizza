@@ -45,6 +45,7 @@
   }
   
   &--black {
+    display: inline-block;
     background-color: $black;
     
     &:hover,

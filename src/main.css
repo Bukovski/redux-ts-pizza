@@ -134,6 +134,7 @@ a {
     padding: 0;
     border-width: 2px; }
   .button--black {
+    display: inline-block;
     background-color: #232323; }
     .button--black:hover, .button--black:active {
       background-color: #3d3d3d; }
