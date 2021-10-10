@@ -10,7 +10,7 @@ import { PizzaAction } from "../../types/pizzas.type";
 export const fetchPizzas = (sortBy: IFiltersSortByState, category: null | number) =>
   (dispatch: Dispatch<PizzaAction>) => {
     axios.get(
-        `/pizzas?${
+        `/db/pizzas?${
           (category !== null)
             ? `category=${ category }`
             : ''
